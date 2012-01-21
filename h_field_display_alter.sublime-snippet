@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_field_display_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_display_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_display_alter(&\$display, \$context) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

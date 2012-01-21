@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_file_update</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_file_update().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_file_update(\$file) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

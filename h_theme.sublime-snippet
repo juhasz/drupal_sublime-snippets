@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>h_theme</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_theme().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_theme(\$existing, \$type, \$theme, \$path) {
+  return array(
+    '${1}' => array(
+      'render element' => '${2}',
+      'file' => '${3}',
+      'variables' => array('${4}' => NULL, '${5}' => NULL${6}),
+    ),
+  );
+}
+]]></content>
+</snippet>

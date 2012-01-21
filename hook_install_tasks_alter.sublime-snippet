@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_install_tasks_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_install_tasks_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_install_tasks_alter(&\$tasks, \$install_state) {
+  // Replace the "Choose language" installation task provided by Drupal core
+  // with a custom callback function defined by this installation profile.
+  /*
+   *\$tasks['install_select_locale']['function'] = 'myprofile_locale_selection';
+   */
+  \$tasks['${1}']['${2}'] = '${3}';
+}
+]]></content>
+</snippet>

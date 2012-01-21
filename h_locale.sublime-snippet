@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>h_locale</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_locale().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_locale(\$op = 'groups') {
+  switch (\$op) {
+    case '${1}':
+      return array('${2}' => t('${3}'));
+  }
+}
+]]></content>
+</snippet>

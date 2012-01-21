@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_file_download_access_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_file_download_access_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_file_download_access_alter(&\$grants, \$field, \$entity_type, \$entity) {
+  // For our example module, we always enforce the rules set by node module.
+  /*
+   *if (isset(\$grants['node'])) {
+   *  \$grants = array('node' => \$grants['node']);
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

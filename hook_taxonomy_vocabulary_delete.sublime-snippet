@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_taxonomy_vocabulary_delete</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_taxonomy_vocabulary_delete().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_taxonomy_vocabulary_delete(\$vocabulary) {
+  /*
+   *if (variable_get('taxonomy_' . \$vocabulary->vid . '_synonyms', FALSE)) {
+   *  variable_del('taxonomy_' . \$vocabulary->vid . '_synonyms');
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

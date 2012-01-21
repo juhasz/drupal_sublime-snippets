@@ -1,0 +1,21 @@
+<snippet>
+  <tabTrigger>hook_permission</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_permission().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_permission() {
+  return array(
+    /*
+     *'administer my module' =>  array(
+     *  'title' => t('Administer my module'),
+     *  'description' => t('Perform administration tasks for my module.'),
+     *),
+     */
+    '${1}' =>  array(
+      'title' => t('${2}'),
+      'description' => t('${3}'),
+    ),
+  );
+}
+]]></content>
+</snippet>

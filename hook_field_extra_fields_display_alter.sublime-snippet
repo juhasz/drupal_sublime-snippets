@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_field_extra_fields_display_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_extra_fields_display_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_extra_fields_display_alter(&\$displays, \$context) {
+  /*
+   *if (\$context['entity_type'] == 'taxonomy_term' && \$context['view_mode'] == 'full') {
+   *  \$displays['description']['visibility'] = FALSE;
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>h_field_formatter_settings_summary</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_formatter_settings_summary(\$field, \$instance, \$view_mode) {
+  ${1:/* Your code here */}
+
+  return \$summary;
+}
+]]></content>
+</snippet>

@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>hook_js_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_js_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_js_alter(&\$javascript) {
+  // Swap out jQuery to use an updated version of the library.
+  /*
+   *\$javascript['misc/jquery.js']['data'] = drupal_get_path('module', 'jquery_update') . '/jquery.js';
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

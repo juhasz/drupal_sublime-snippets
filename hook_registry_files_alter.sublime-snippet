@@ -1,0 +1,24 @@
+<snippet>
+  <tabTrigger>hook_registry_files_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_registry_files_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_registry_files_alter(&\$files, \$modules) {
+  /*
+   *foreach (\$modules as \$module) {
+   *  // Only add test files for disabled modules, as enabled modules should
+   *  // already include any test files they provide.
+   *  if (!\$module->status) {
+   *    \$dir = \$module->dir;
+   *    foreach (\$module->info['files'] as \$file) {
+   *      if (substr(\$file, -5) == '.test') {
+   *        \$files["\$dir/\$file"] = array('module' => \$module->name, 'weight' => \$module->weight);
+   *      }
+   *    }
+   *  }
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

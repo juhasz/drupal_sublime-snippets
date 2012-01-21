@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_menu_local_tasks_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_menu_local_tasks_alter(&\$data, \$router_item, \$root_path) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

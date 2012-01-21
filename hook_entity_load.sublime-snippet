@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>hook_entity_load</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_entity_load().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_entity_load(\$entities, \$type) {
+  foreach (\$entities as \$entity) {
+    \$entity->${1} = mymodule_add_something(\$entity, \$type);
+  }
+}
+]]></content>
+</snippet>

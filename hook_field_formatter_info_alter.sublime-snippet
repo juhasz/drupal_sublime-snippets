@@ -1,0 +1,20 @@
+<snippet>
+  <tabTrigger>hook_field_formatter_info_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_formatter_info_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_formatter_info_alter(&\$info) {
+  // Add a setting to a formatter type.
+  /*
+   *\$info['text_default']['settings'] += array(
+   *  'mymodule_additional_setting' => 'default value',
+   *);
+   */
+  // Let a new field type re-use an existing formatter.
+  /*
+   *\$info['text_default']['field types'][] = 'my_field_type';
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

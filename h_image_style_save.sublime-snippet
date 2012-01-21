@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_image_style_save</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_image_style_save().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_image_style_save(\$style) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

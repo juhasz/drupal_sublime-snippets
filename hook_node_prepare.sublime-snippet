@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_node_prepare</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_prepare().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_prepare(\$node) {
+  /*
+   *if (!isset(\$node->comment)) {
+   *  \$node->comment = variable_get("comment_\$node->type", COMMENT_NODE_OPEN);
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

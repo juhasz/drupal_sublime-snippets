@@ -1,0 +1,17 @@
+<snippet>
+  <tabTrigger>hook_aggregator_parse</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_aggregator_parse().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_aggregator_parse(\$feed) {
+  /*
+   *if (\$items = mymodule_parse(\$feed->source_string)) {
+   *  \$feed->items = \$items;
+   *  return TRUE;
+   *}
+   *return FALSE;
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

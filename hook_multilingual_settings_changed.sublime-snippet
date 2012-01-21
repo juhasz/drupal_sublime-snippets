@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_multilingual_settings_changed</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_multilingual_settings_changed().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_multilingual_settings_changed() {
+  /*
+   *field_info_cache_clear();
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

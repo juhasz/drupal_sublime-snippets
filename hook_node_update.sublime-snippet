@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_node_update</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_update().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_update(\$node) {
+  db_update('${1}')
+    ->fields(array('${2}' => ${3})
+    ->condition('nid', \$node->nid)
+    ->execute();
+}
+]]></content>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>hook_field_attach_load</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_attach_load().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_attach_load(\$entity_type, &\$entities, \$age, \$options) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

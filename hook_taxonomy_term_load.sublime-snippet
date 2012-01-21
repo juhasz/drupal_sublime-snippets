@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_taxonomy_term_load</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_taxonomy_term_load().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_taxonomy_term_load(\$terms) {
+  /*
+   *\$result = db_query('SELECT tid, foo FROM {mytable} WHERE tid IN (:tids)', array(':tids' => array_keys(\$terms)));
+   *foreach (\$result as \$record) {
+   *  \$terms[\$record->tid]->foo = \$record->foo;
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

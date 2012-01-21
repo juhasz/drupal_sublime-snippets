@@ -1,0 +1,19 @@
+<snippet>
+  <tabTrigger>hook_user_categories</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_user_categories().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_categories() {
+  return array(array(
+    /*
+     *'name' => 'account',
+     *'title' => t('Account settings'),
+     *'weight' => 1,
+     */
+    'name' => '${1}',
+    'title' => t('${2}'),
+    'weight' => ${3},
+  ));
+}
+]]></content>
+</snippet>

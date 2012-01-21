@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_taxonomy_vocabulary_load</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_taxonomy_vocabulary_load().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_taxonomy_vocabulary_load(\$vocabularies) {
+  foreach (\$vocabularies as \$vocabulary) {
+    /*
+     *\$vocabulary->synonyms = variable_get('taxonomy_' . \$vocabulary->vid . '_synonyms', FALSE);
+     */
+    ${1:/* Your code here */}
+  }
+}
+]]></content>
+</snippet>

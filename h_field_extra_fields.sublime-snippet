@@ -1,0 +1,27 @@
+<snippet>
+  <tabTrigger>h_field_extra_fields</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_extra_fields().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_extra_fields() {
+  \$extra['${1}']['${2}'] = array(
+    'form' => array(
+      '${3}' => array(
+        'label' => t('${4}'),
+        'description' => t('${5}'),
+        'weight' => ${6},
+      ),
+    ),
+    'display' => array(
+      '${7}' => array(
+        'label' => t('${8}'),
+        'description' => t('${9}'),
+        'weight' => ${10},
+      ),
+    )
+  );
+
+  return \$extra;
+}
+]]></content>
+</snippet>

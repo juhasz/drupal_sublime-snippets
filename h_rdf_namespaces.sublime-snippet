@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>h_rdf_namespaces</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_rdf_namespaces().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_rdf_namespaces() {
+  return array(
+    '${1}'  => '${2}',
+  );
+}
+]]></content>
+</snippet>

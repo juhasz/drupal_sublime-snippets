@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_overlay_child_initialize</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_overlay_child_initialize().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_overlay_child_initialize() {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

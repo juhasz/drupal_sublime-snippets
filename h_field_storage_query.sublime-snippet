@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_field_storage_query</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_storage_query().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_storage_query(\$query) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

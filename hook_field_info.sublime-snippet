@@ -1,0 +1,29 @@
+<snippet>
+  <tabTrigger>hook_field_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_info() {
+  return array(
+    /*
+     *'text' => array(
+     *  'label' => t('Text'),
+     *  'description' => t('This field stores varchar text in the database.'),
+     *  'settings' => array('max_length' => 255),
+     *  'instance_settings' => array('text_processing' => 0),
+     *  'default_widget' => 'text_textfield',
+     *  'default_formatter' => 'text_default',
+     *),
+     */
+    '${1}' => array(
+      'label' => t('${2}'),
+      'description' => t('${3}'),
+      'settings' => array('${4}' => ${5}),
+      'instance_settings' => array('${6}' => ${7}),
+      'default_widget' => '${8}',
+      'default_formatter' => '${9}',
+    ),
+  );
+}
+]]></content>
+</snippet>

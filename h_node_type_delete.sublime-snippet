@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_node_type_delete</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_type_delete().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_type_delete(\$info) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

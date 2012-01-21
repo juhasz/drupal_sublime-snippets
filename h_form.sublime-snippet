@@ -1,0 +1,18 @@
+<snippet>
+  <tabTrigger>h_form</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_form().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_form(\$node, &\$form_state) {
+  \$type = node_type_get_type(\$node);
+
+  \$form['${1}']${2} = array(
+    '#type' => '${3}',
+    '#title' => t('${4}'),
+    '#default_value' => ${5},${6}
+  );
+
+  return \$form;
+}
+]]></content>
+</snippet>

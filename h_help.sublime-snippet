@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>h_help</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_help().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_help(\$path, \$arg) {
+  switch (\$path) {
+    case '${1}':
+      return '<p>' . t('${2}', array('${3}' => ${4})) . '</p>';
+  }
+}
+]]></content>
+</snippet>

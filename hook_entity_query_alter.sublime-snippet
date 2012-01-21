@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>hook_entity_query_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_entity_query_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_entity_query_alter(\$query) {
+  \$query->${1} = '${TM_FILENAME/([^.]*)\..*$/$1/}_query_callback';
+}
+]]></content>
+</snippet>

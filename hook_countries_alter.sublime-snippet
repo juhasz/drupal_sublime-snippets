@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>hook_countries_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_countries_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_countries_alter(&\$countries) {
+  // Elbonia is now independent, so add it to the country list.
+  /*
+   *\$countries['EB'] = 'Elbonia';
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_file_load</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_file_load().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_file_load(\$files) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

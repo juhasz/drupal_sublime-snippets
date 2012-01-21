@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>hook_comment_presave</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_comment_presave().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_comment_presave(\$comment) {
+  // Remove leading & trailing spaces from the comment subject.
+  /*
+   *\$comment->subject = trim(\$comment->subject);
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,17 @@
+<snippet>
+  <tabTrigger>hook_page_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_page_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_page_alter(&\$page) {
+  // Add help text to the user login block.
+  /*
+   *\$page['sidebar_first']['user_login']['help'] = array(
+   *  '#weight' => -10,
+   *  '#markup' => t('To post comments or add new content, you first have to log in.'),
+   *);
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

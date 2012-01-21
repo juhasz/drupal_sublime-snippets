@@ -1,0 +1,21 @@
+<snippet>
+  <tabTrigger>hook_field_presave</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_presave().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_presave(\$entity_type, \$entity, \$field, \$instance, \$langcode, &\$items) {
+  if (\$field['type'] == '${1}') {
+    // Let PHP round the value to ensure consistent behavior across storage
+    // backends.
+    foreach (\$items as \$delta => \$item) {
+      /*
+       *if (isset(\$item['value'])) {
+       *  \$items[\$delta]['value'] = round(\$item['value'], \$field['settings']['scale']);
+       *}
+       */
+      ${1:/* Your code here */}
+    }
+  }
+}
+]]></content>
+</snippet>

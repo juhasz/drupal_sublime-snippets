@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>h_search_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_search_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_search_info() {
+  return array(
+    'title' => '${1}',
+    'path' => '${2}',
+    'conditions_callback' => '${3}',
+  );
+}
+]]></content>
+</snippet>

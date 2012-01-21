@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_taxonomy_term_presave</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_taxonomy_term_presave().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_taxonomy_term_presave(\$term) {
+  /*
+   *\$term->foo = 'bar';
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

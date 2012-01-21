@@ -1,0 +1,21 @@
+<snippet>
+  <tabTrigger>hook_language_init</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_language_init().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_language_init() {
+  global \$language, \$conf;
+
+  switch (\$language->language) {
+    /*
+     *case 'it':
+     *  \$conf['site_name'] = 'Il mio sito Drupal';
+     *  break;
+     */
+    case '${1}':
+      \$conf['${2}'] = '${3}';
+      break;
+  }
+}
+]]></content>
+</snippet>

@@ -1,0 +1,17 @@
+<snippet>
+  <tabTrigger>hook_openid</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_openid().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_openid(\$op, \$request) {
+  /*
+   *if (\$op == 'request') {
+   *  \$request['openid.identity'] = 'http://myname.myopenid.com/';
+   *}
+   */
+  ${1:/* Your code here */}
+
+  return \$request;
+}
+]]></content>
+</snippet>

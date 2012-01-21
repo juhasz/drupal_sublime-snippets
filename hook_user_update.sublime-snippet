@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_user_update</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_user_update().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_update(&\$edit, \$account, \$category) {
+  db_insert('${1}')
+    ->fields(array(
+      'uid' => \$account->uid,
+      'changed' => time(),
+    ))
+    ->execute();
+}
+]]></content>
+</snippet>

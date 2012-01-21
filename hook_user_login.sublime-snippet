@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_user_login</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_user_login().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_login(&\$edit, \$account) {
+  // If the user has a NULL time zone, notify them to set a time zone.
+  /*
+   *if (!\$user->timezone && variable_get('configurable_timezones', 1) && variable_get('empty_timezone_message', 0)) {
+   *  drupal_set_message(t('Configure your <a href="@user-edit">account time zone setting</a>.', array('@user-edit' => url("user/\$user->uid/edit", array('query' => drupal_get_destination(), 'fragment' => 'edit-timezone')))));
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

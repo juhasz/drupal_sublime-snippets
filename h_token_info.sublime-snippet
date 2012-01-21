@@ -1,0 +1,22 @@
+<snippet>
+  <tabTrigger>h_token_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_token_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_token_info() {
+  \$type = array(
+    'name' => t('${1}'),
+    'description' => t('${2}'),
+    'needs-data' => '${3}',
+  );
+  $${4}['${5}'] = array(
+    'name' => t("${6}"),
+    'description' => t("${7}"),
+  );
+  return array(
+    'types' => array('${8}' => \$type),
+    'tokens' => array('${9}' => $${10}),
+  );
+}
+]]></content>
+</snippet>

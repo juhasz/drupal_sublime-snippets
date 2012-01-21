@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>h_token_info_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_token_info_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_token_info_alter(&\$data) {
+  \$data['tokens']['${1}']['${2}'] = array(
+    'name' => t("${3}"),
+    'description' => t("${4}"),
+  );
+}
+]]></content>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_comment_load</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_comment_load().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_comment_load(\$comments) {
+  /*
+   *\$result = db_query('SELECT cid, foo FROM {mytable} WHERE cid IN (:cids)', array(':cids' => array_keys(\$comments)));
+   *foreach (\$result as \$record) {
+   *  \$comments[\$record->cid]->foo = \$record->foo;
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

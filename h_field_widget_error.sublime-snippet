@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_field_widget_error</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_widget_error().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_widget_error(\$element, \$error, \$form, &\$form_state) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

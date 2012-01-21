@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_modules_uninstalled</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_modules_uninstalled().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_modules_uninstalled(\$modules) {
+  foreach (\$modules as \$module) {
+    db_delete('${1}')
+      ->condition('module', \$module)
+      ->execute();
+  }
+  ${2}_cache_rebuild();
+}
+]]></content>
+</snippet>

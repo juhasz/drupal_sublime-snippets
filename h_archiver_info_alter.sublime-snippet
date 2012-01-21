@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_archiver_info_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_archiver_info_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_archiver_info_alter(&\$info) {
+  \$info['${1}']['${2}'][] = '${3}';
+}
+]]></content>
+</snippet>

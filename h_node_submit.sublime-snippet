@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_node_submit</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_submit().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_submit(\$node, \$form, &\$form_state) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

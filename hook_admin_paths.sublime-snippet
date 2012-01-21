@@ -1,0 +1,17 @@
+<snippet>
+  <tabTrigger>hook_admin_paths</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_admin_paths().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_admin_paths() {
+  \$paths = array(
+    /*
+     *'mymodule/* /add' => TRUE,
+     *'mymodule/* /edit' => TRUE,
+     */
+    ${1:/* Your code here */}
+  );
+  return \$paths;
+}
+]]></content>
+</snippet>

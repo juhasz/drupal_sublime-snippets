@@ -1,0 +1,22 @@
+<snippet>
+  <tabTrigger>h_filter_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_filter_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_filter_info() {
+  \$filters['${1}'] = array(
+    'title' => t('${2}'),
+    'description' => t('${3}'),
+    'process callback' => '${4}',
+    'settings callback' => '${5}',
+    'default settings' => array(
+      'allowed_html' => '${6}',
+      'filter_html_help' => ${7},
+      'filter_html_nofollow' => ${8},
+    ),
+    'tips callback' => '${9}',
+  );
+  return \$filters;
+}
+]]></content>
+</snippet>

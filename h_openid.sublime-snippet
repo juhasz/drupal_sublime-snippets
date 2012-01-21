@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>h_openid</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_openid().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_openid(\$op, \$request) {
+  ${1:/* Your code here */}
+
+  return \$request;
+}
+]]></content>
+</snippet>

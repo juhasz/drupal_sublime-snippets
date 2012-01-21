@@ -1,0 +1,17 @@
+<snippet>
+  <tabTrigger>hook_validate</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_validate().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_validate(\$node, \$form, &\$form_state) {
+  /*
+   *if (isset(\$node->end) && isset(\$node->start)) {
+   *  if (\$node->start > \$node->end) {
+   *    form_set_error('time', t('An event may not end before it starts.'));
+   *  }
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

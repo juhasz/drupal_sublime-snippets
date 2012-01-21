@@ -1,0 +1,11 @@
+<snippet>
+  <tabTrigger>h_language_switch_links_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_language_switch_links_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_language_switch_links_alter(array &\$links, \$type, \$path) {
+  global \$language;
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

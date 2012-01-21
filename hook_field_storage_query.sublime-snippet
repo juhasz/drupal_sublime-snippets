@@ -1,0 +1,132 @@
+<snippet>
+  <tabTrigger>hook_field_storage_query</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_storage_query().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_storage_query(\$query) {
+  /*
+   *  \$load_current = \$options['age'] == FIELD_LOAD_CURRENT;
+   *
+   *  \$field = field_info_field_by_id(\$field_id);
+   *  \$field_name = \$field['field_name'];
+   *  \$table = \$load_current ? _field_sql_storage_tablename(\$field) : _field_sql_storage_revision_tablename(\$field);
+   *  \$field_columns = array_keys(\$field['columns']);
+   *
+   *  // Build the query.
+   *  \$query = db_select(\$table, 't');
+   *  \$query->join('field_config_entity_type', 'e', 't.etid = e.etid');
+   *
+   *  // Add conditions.
+   *  foreach (\$conditions as \$condition) {
+   *    // A condition is either a (column, value, operator) triple, or a
+   *    // (column, value) pair with implied operator.
+   *    @list(\$column, \$value, \$operator) = \$condition;
+   *    // Translate operator and value if needed.
+   *    switch (\$operator) {
+   *      case 'STARTS_WITH':
+   *        \$operator = 'LIKE';
+   *        \$value = db_like(\$value) . '%';
+   *        break;
+   *
+   *      case 'ENDS_WITH':
+   *        \$operator = 'LIKE';
+   *        \$value = '%' . db_like(\$value);
+   *        break;
+   *
+   *      case 'CONTAINS':
+   *        \$operator = 'LIKE';
+   *        \$value = '%' . db_like(\$value) . '%';
+   *        break;
+   *    }
+   *    // Translate field columns into prefixed db columns.
+   *    if (in_array(\$column, \$field_columns)) {
+   *      \$column = _field_sql_storage_columnname(\$field_name, \$column);
+   *    }
+   *    // Translate entity types into numeric ids. Expressing the condition on the
+   *    // local 'etid' column rather than the JOINed 'type' column avoids a
+   *    // filesort.
+   *    if (\$column == 'type') {
+   *      \$column = 't.etid';
+   *      if (is_array(\$value)) {
+   *        foreach (array_keys(\$value) as \$key) {
+   *          \$value[\$key] = _field_sql_storage_etid(\$value[\$key]);
+   *        }
+   *      }
+   *      else {
+   *        \$value = _field_sql_storage_etid(\$value);
+   *      }
+   *    }
+   *    // Track condition on 'deleted'.
+   *    if (\$column == 'deleted') {
+   *      \$condition_deleted = TRUE;
+   *    }
+   *
+   *    \$query->condition(\$column, \$value, \$operator);
+   *  }
+   *
+   *  // Exclude deleted data unless we have a condition on it.
+   *  if (!isset(\$condition_deleted)) {
+   *    \$query->condition('deleted', 0);
+   *  }
+   *
+   *  // For a count query, return the count now.
+   *  if (\$options['count']) {
+   *    return \$query
+   *      ->fields('t', array('etid', 'entity_id', 'revision_id'))
+   *      ->distinct()
+   *      ->countQuery()
+   *      ->execute()
+   *      ->fetchField();
+   *  }
+   *
+   *  // For a data query, add fields.
+   *  \$query
+   *    ->fields('t', array('bundle', 'entity_id', 'revision_id'))
+   *    ->fields('e', array('type'))
+   *    // We need to ensure entities arrive in a consistent order for the
+   *    // range() operation to work.
+   *    ->orderBy('t.etid')
+   *    ->orderBy('t.entity_id');
+   *
+   *  // Initialize results array
+   *  \$return = array();
+   *
+   *  // Getting \$count entities possibly requires reading more than \$count rows
+   *  // since fields with multiple values span over several rows. We query for
+   *  // batches of \$count rows until we've either read \$count entities or received
+   *  // less rows than asked for.
+   *  \$entity_count = 0;
+   *  do {
+   *    if (\$options['limit'] != FIELD_QUERY_NO_LIMIT) {
+   *      \$query->range(\$options['cursor'], \$options['limit']);
+   *    }
+   *    \$results = \$query->execute();
+   *
+   *    \$row_count = 0;
+   *    foreach (\$results as \$row) {
+   *      \$row_count++;
+   *      \$options['cursor']++;
+   *      // If querying all revisions and the entity type has revisions, we need
+   *      // to key the results by revision_ids.
+   *      \$entity_type = entity_get_info(\$row->type);
+   *      \$id = (\$load_current || empty(\$entity_type['entity keys']['revision'])) ? \$row->entity_id : \$row->revision_id;
+   *
+   *      if (!isset(\$return[\$row->type][\$id])) {
+   *        \$return[\$row->type][\$id] = entity_create_stub_entity(\$row->type, array(\$row->entity_id, \$row->revision_id, \$row->bundle));
+   *        \$entity_count++;
+   *      }
+   *    }
+   *  } while (\$options['limit'] != FIELD_QUERY_NO_LIMIT && \$row_count == \$options['limit'] && \$entity_count < \$options['limit']);
+   *
+   *  // The query is complete when the last batch returns less rows than asked
+   *  // for.
+   *  if (\$row_count < \$options['limit']) {
+   *    \$options['cursor'] = FIELD_QUERY_COMPLETE;
+   *  }
+   *
+   *  return \$return;
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,20 @@
+<snippet>
+  <tabTrigger>hook_xmlrpc</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_xmlrpc().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_xmlrpc() {
+  /*
+   *return array(
+   *  'drupal.login' => 'drupal_login',
+   *  array(
+   *    'drupal.site.ping',
+   *    'drupal_directory_ping',
+   *    array('boolean', 'string', 'string', 'string', 'string', 'string'),
+   *    t('Handling ping request'))
+   *);
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

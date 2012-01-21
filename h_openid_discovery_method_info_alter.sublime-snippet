@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_openid_discovery_method_info_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_openid_discovery_method_info_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_openid_discovery_method_info_alter(&\$methods) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_file_url_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_file_url_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_file_url_alter(&\$uri) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

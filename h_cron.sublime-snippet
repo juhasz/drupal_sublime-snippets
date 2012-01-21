@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_cron</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_cron().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_cron() {
+   ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+  <tabTrigger>hook_menu</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_menu().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_menu() {
+  /*
+   *\$items['blog'] = array(
+   *  'title' => 'blogs',
+   *  'page callback' => 'blog_page',
+   *  'access arguments' => array('access content'),
+   *  'type' => MENU_SUGGESTED_ITEM,
+   *);
+   */
+  \$items['${1}'] = array(
+    'title' => '${2}',
+    'page callback' => '${3}',
+    'page arguments' => array(${4}),
+    'access arguments' => array('${5}'),
+    'type' => ${6},
+    'file' => ${7},
+  );
+
+  return \$items;
+}
+]]></content>
+</snippet>

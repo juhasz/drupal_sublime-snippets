@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>h_field_storage_update_field</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_storage_update_field().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_storage_update_field(\$field, \$prior_field, \$has_data) {
+  if (!\$has_data) {
+    ${1:/* Your code here */}
+  }
+  else {
+    ${2:/* Your code here */}
+  }
+  drupal_get_schema(NULL, TRUE);
+}
+]]></content>
+</snippet>

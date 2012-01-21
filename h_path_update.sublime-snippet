@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_path_update</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_path_update().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_path_update(\$path) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>hook_field_delete_field</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_delete_field().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_delete_field(\$field) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_enable</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_enable().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_enable() {
+  /*
+   *mymodule_cache_rebuild();
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

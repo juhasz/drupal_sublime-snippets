@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_exit</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_exit().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_exit(\$destination = NULL) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

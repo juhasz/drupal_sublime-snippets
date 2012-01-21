@@ -1,0 +1,17 @@
+<snippet>
+  <tabTrigger>h_stream_wrappers</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_stream_wrappers().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_stream_wrappers() {
+  return array(
+     '${1}' => array(
+      'name' => t('${2}'),
+      'class' => '${3}',
+      'description' => t('${4}'),
+    ),
+    )
+  );
+}
+]]></content>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_search_access</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_search_access().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_search_access() {
+  /*
+   *return user_access('access content');
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

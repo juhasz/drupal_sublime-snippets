@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_node_presave</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_presave().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_presave(\$node) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_filter_format_update</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_filter_format_update().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_filter_format_update(\$format) {
+  /*
+   *mymodule_cache_rebuild();
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

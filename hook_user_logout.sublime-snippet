@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_user_logout</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_user_logout().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_logout(\$account) {
+  db_insert('${1}')
+    ->fields(array(
+      'uid' => \$account->uid,
+      'time' => time(),
+    ))
+    ->execute();
+}
+]]></content>
+</snippet>

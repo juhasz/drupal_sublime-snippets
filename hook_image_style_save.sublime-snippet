@@ -1,0 +1,17 @@
+<snippet>
+  <tabTrigger>hook_image_style_save</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_image_style_save().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_image_style_save(\$style) {
+  // if a module defines an image style and that style is renamed by the user
+  // the module should update any references to that style.
+  /*
+   *if (isset(\$style['old_name']) && \$style['old_name'] == variable_get('mymodule_image_style', '')) {
+   *  variable_set('mymodule_image_style', \$style['name']);
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

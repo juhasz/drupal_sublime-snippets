@@ -1,0 +1,24 @@
+<snippet>
+  <tabTrigger>hook_form_system_theme_settings_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_form_system_theme_settings_alter(&\$form, &\$form_state) {
+  // Add a checkbox to toggle the breadcrumb trail.
+  /*
+   *\$form['toggle_breadcrumb'] = array(
+   *  '#type' => 'checkbox',
+   *  '#title' => t('Display the breadcrumb'),
+   *  '#default_value' => theme_get_setting('toggle_breadcrumb'),
+   *  '#description'   => t('Show a trail of links from the homepage to the current page.'),
+   *);
+   */
+  \$form['${1}']${2} = array(
+    '#type' => '${3}',
+    '#title' => t('${4}'),
+    '#default_value' => theme_get_setting('${5}'),
+    '#description'   => t('${6}'),${7}
+  );
+}
+]]></content>
+</snippet>

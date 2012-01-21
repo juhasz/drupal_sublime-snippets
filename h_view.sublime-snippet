@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>h_view</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_view().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_view(\$node, \$view_mode) {
+  ${1:/* Your code here */}
+
+  return \$node;
+}
+]]></content>
+</snippet>

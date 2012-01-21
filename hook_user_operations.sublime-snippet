@@ -1,0 +1,22 @@
+<snippet>
+  <tabTrigger>hook_user_operations</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_user_operations().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_operations() {
+  \$operations = array(
+    /*
+     *'unblock' => array(
+     *  'label' => t('Unblock the selected users'),
+     *  'callback' => 'user_user_operations_unblock',
+     *),
+     */
+    '${1}' => array(
+      'label' => t('${2}'),
+      'callback' => '${3}',
+    ),
+  );
+  return \$operations;
+}
+]]></content>
+</snippet>

@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>h_update_dependencies</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_update_dependencies().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_update_dependencies() {
+  \$dependencies['${1}']['${2}'] = array(
+    '${3}' => ${4},
+  );
+
+  return \$dependencies;
+}
+]]></content>
+</snippet>

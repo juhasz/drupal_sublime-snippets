@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_exit</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_exit().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_exit(\$destination = NULL) {
+  /*
+   *db_update('counter')
+   *  ->expression('hits', 'hits + 1')
+   *  ->condition('type', 1)
+   *  ->execute();
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

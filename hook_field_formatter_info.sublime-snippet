@@ -1,0 +1,21 @@
+<snippet>
+  <tabTrigger>hook_field_formatter_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_formatter_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_formatter_info() {
+  return array(
+    /*
+     *'text_default' => array(
+     *  'label' => t('Default'),
+     *  'field types' => array('text', 'text_long', 'text_with_summary'),
+     *),
+     */
+    '${1}' => array(
+      'label' => t('${2}'),
+      'field types' => array('${3}'),
+    ),
+  );
+}
+]]></content>
+</snippet>

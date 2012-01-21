@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>h_field_widget_form</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_widget_form().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_widget_form(&\$form, &\$form_state, \$field, \$instance, \$langcode, \$items, \$delta, \$element) {
+  \$element += array(
+    '#type' => ${1},
+    '#default_value' => ${2},
+  );
+  return \$element;
+}
+]]></content>
+</snippet>

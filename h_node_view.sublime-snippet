@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_node_view</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_view().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_view(\$node, \$view_mode, \$langcode) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

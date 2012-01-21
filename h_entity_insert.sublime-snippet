@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_entity_insert</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_entity_insert().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_entity_insert(\$entity, \$type) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_admin_paths_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_admin_paths_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_admin_paths_alter(&\$paths) {
+  \$paths['${1}'] = ${2};
+}
+]]></content>
+</snippet>

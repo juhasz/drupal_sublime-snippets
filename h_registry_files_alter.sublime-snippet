@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_registry_files_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_registry_files_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_registry_files_alter(&\$files, \$modules) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

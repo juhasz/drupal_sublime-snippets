@@ -1,0 +1,20 @@
+<snippet>
+  <tabTrigger>h_menu_contextual_links_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_menu_contextual_links_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_menu_contextual_links_alter(&\$links, \$router_item, \$root_path) {
+  if (\$root_path == '${1}') {
+    \$links['${2}'] = array(
+      'title' => t('${3}'),
+      'href' => '${4}',
+      'localized_options' => array(
+        'query' => array(
+          '${5}' => '${6}',
+        ),
+      ),
+    );
+  }
+}
+]]></content>
+</snippet>

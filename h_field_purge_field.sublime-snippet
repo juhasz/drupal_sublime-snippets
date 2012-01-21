@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>h_field_purge_field</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_purge_field().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_purge_field(\$field) {
+  db_delete('${1}')
+    ->condition('id', \$field['id'])
+    ->execute();
+}
+]]></content>
+</snippet>

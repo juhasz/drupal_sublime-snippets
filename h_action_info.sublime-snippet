@@ -1,0 +1,18 @@
+<snippet>
+  <tabTrigger>h_action_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_action_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_action_info() {
+  return array(
+    '${1}' => array(
+      'type' => '${2}',
+      'label' => t('${3}'),
+      'configurable' => ${4},
+      'behavior' => array('${5}'),
+      'triggers' => array('${6}', ${7}),
+    ),
+  );
+}
+]]></content>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>h_filetransfer_backends</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_filetransfer_backends().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_filetransfer_backends() {
+  \$backends = array();
+  ${1:/* Your code here */}
+  return \$backends;
+}
+]]></content>
+</snippet>

@@ -1,0 +1,26 @@
+<snippet>
+  <tabTrigger>hook_field_storage_delete_revision</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_storage_delete_revision().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_storage_delete_revision(\$entity_type, \$entity, \$fields) {
+  list(\$id, \$vid, \$bundle) = entity_extract_ids(\$entity_type, \$entity);
+  \$etid = _field_sql_storage_etid(\$entity_type);
+
+  if (isset(\$vid)) {
+    foreach (\$fields as \$field_id) {
+      /*
+       *\$field = field_info_field_by_id(\$field_id);
+       *\$revision_name = _field_sql_storage_revision_tablename(\$field);
+       *db_delete(\$revision_name)
+       *  ->condition('etid', \$etid)
+       *  ->condition('entity_id', \$id)
+       *  ->condition('revision_id', \$vid)
+       *  ->execute();
+       */
+      ${1:/* Your code here */}
+    }
+  }
+}
+]]></content>
+</snippet>

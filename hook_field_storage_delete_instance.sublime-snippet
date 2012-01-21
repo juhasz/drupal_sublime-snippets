@@ -1,0 +1,26 @@
+<snippet>
+  <tabTrigger>hook_field_storage_delete_instance</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_storage_delete_instance().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_storage_delete_instance(\$instance) {
+  /*
+   *\$etid = _field_sql_storage_etid(\$instance['entity_type']);
+   *\$field = field_info_field(\$instance['field_name']);
+   *\$table_name = _field_sql_storage_tablename(\$field);
+   *\$revision_name = _field_sql_storage_revision_tablename(\$field);
+   *db_update(\$table_name)
+   *  ->fields(array('deleted' => 1))
+   *  ->condition('etid', \$etid)
+   *  ->condition('bundle', \$instance['bundle'])
+   *  ->execute();
+   *db_update(\$revision_name)
+   *  ->fields(array('deleted' => 1))
+   *  ->condition('etid', \$etid)
+   *  ->condition('bundle', \$instance['bundle'])
+   *  ->execute();
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

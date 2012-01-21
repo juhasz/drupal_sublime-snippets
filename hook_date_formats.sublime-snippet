@@ -1,0 +1,23 @@
+<snippet>
+  <tabTrigger>hook_date_formats</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_date_formats().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_date_formats() {
+  return array(
+    /*
+     *array(
+     *  'type' => 'mymodule_extra_long',
+     *  'format' => 'l jS F Y H:i:s e',
+     *  'locales' => array('en-ie'),
+     *),
+     */
+    array(
+      'type' => '${1}',
+      'format' => '${2}',
+      'locales' => array('${3}'),
+    ),
+  );
+}
+]]></content>
+</snippet>

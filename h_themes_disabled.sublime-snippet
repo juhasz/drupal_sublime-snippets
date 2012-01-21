@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_themes_disabled</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_themes_disabled().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_themes_disabled(\$theme_list) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

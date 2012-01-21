@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_cron_queue_info_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_cron_queue_info_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_cron_queue_info_alter(&\$queues) {
+  \$queues['${1}']['time'] = ${2};
+}
+]]></content>
+</snippet>

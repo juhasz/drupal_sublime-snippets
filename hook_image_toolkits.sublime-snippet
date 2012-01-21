@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_image_toolkits</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_image_toolkits().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_image_toolkits() {
+  return array(
+    '${1}' => array(
+      'title' => t('${2}'),
+      'available' => TRUE,
+    ),
+  );
+}
+]]></content>
+</snippet>

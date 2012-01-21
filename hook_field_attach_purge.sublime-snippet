@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_field_attach_purge</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_attach_purge().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_attach_purge(\$entity_type, \$entity, \$field, \$instance) {
+  // find the corresponding data in mymodule and purge it
+  /*
+   *if(\$entity_type == 'node' && \$field->field_name == 'my_field_name') {
+   *  mymodule_remove_mydata(\$entity->nid);
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

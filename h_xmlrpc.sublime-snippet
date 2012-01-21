@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_xmlrpc</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_xmlrpc().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_xmlrpc() {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

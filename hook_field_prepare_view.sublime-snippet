@@ -1,0 +1,25 @@
+<snippet>
+  <tabTrigger>hook_field_prepare_view</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_prepare_view().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_prepare_view(\$entity_type, \$entities, \$field, \$instances, \$langcode, &\$items) {
+  // Sample code from image.module: if there are no images specified at all,
+  // use the default image.
+  /*
+   *foreach (\$entities as \$id => \$entity) {
+   *  if (empty(\$items[\$id]) && \$field['settings']['default_image']) {
+   *    if (\$file = file_load(\$field['settings']['default_image'])) {
+   *      \$items[\$id][0] = (array) \$file + array(
+   *        'is_default' => TRUE,
+   *        'alt' => '',
+   *        'title' => '',
+   *      );
+   *    }
+   *  }
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

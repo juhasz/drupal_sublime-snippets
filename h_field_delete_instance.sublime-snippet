@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_field_delete_instance</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_delete_instance().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_delete_instance(\$instance) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

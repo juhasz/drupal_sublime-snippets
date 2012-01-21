@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>hook_field_attach_presave</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_attach_presave().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_attach_presave(\$entity_type, \$entity) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

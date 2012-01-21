@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>hook_image_style_flush</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_image_style_flush().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_image_style_flush(\$style) {
+  // Empty cached data that contains information about the style.
+  /*
+   *cache_clear_all('*', 'cache_mymodule', TRUE);
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

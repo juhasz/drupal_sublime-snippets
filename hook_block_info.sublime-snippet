@@ -1,0 +1,22 @@
+<snippet>
+  <tabTrigger>hook_block_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_block_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_block_info() {
+  // This example comes from node.module.
+  /*
+   *\$blocks['syndicate'] = array(
+   *  'info' => t('Syndicate'),
+   *  'cache' => DRUPAL_NO_CACHE
+   *);
+   */
+  \$blocks['${1}'] = array(
+    'info' => t('${2}'),
+    'cache' => ${3}DRUPAL_NO_CACHE
+  );
+
+  return \$blocks;
+}
+]]></content>
+</snippet>

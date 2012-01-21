@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>h_element_info_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_element_info_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_element_info_alter(&\$type) {
+  if (isset(\$type['${1}'])) {
+    \$type['${2}'] = ${3};
+  }
+}
+]]></content>
+</snippet>

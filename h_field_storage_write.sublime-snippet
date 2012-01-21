@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>h_field_storage_write</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_storage_write().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_storage_write(\$entity_type, \$entity, \$op, \$fields) {
+  list(\$id, \$vid, \$bundle) = entity_extract_ids(\$entity_type, \$entity);
+  \$etid = _field_sql_storage_etid(\$entity_type);
+
+  foreach (\$fields as \$field_id) {
+    ${1:/* Your code here */}
+  }
+}
+]]></content>
+</snippet>

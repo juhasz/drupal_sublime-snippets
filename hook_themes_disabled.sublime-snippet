@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>hook_themes_disabled</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_themes_disabled().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_themes_disabled(\$theme_list) {
+  // Clear all update module caches.
+  /*
+   *_update_cache_clear();
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

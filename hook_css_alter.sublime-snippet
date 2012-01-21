@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>hook_css_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_css_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_css_alter(&\$css) {
+  // Remove defaults.css file.
+  /*
+   *unset(\$css[drupal_get_path('module', 'system') . '/defaults.css']);
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

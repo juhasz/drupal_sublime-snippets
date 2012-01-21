@@ -1,0 +1,19 @@
+<snippet>
+  <tabTrigger>hook_field_delete_revision</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_delete_revision().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_delete_revision(\$entity_type, \$entity, \$field, \$instance, \$langcode, &\$items) {
+  foreach (\$items as \$delta => \$item) {
+    // For hook_file_references, remember that this file is being deleted.
+    /*
+     *\$item['file_field_name'] = \$field['field_name'];
+     *if (file_field_delete_file(\$item, \$field)) {
+     *  \$items[\$delta] = NULL;
+     *}
+     */
+    ${1:/* Your code here */}
+  }
+}
+]]></content>
+</snippet>

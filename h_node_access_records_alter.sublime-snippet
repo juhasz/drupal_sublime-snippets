@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_node_access_records_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_access_records_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_access_records_alter(&\$grants, \$node) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_language_negotiation_info_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_language_negotiation_info_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_language_negotiation_info_alter(array &\$language_providers) {
+  /*
+   *if (isset(\$language_providers['custom_language_provider'])) {
+   *  \$language_providers['custom_language_provider']['config'] = 'admin/config/regional/language/configure/custom-language-provider';
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

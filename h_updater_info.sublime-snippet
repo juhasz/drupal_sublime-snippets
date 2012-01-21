@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>h_updater_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_updater_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_updater_info() {
+  return array(
+    '${1}' => array(
+      'class' => '${2}',
+      'name' => t('${3}'),
+      'weight' => ${4},
+    ),
+  );
+}
+]]></content>
+</snippet>

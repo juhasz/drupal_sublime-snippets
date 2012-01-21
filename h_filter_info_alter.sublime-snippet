@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_filter_info_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_filter_info_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_filter_info_alter(&\$info) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,19 @@
+<snippet>
+  <tabTrigger>h_field_instance_settings_form</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_instance_settings_form().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_instance_settings_form(\$field, \$instance) {
+  \$settings = \$instance['settings'];
+  \$form['${1}']${2} = array(
+    '#type' => '${3}',
+    '#title' => t('${4}'),
+    '#default_value' => \$settings['${5}'],
+    '#required' => ${6},
+    '#element_validate' => array('${7}'),
+    '#description' => t('${8}'),${9}
+  );
+  return \$form;
+}
+]]></content>
+</snippet>

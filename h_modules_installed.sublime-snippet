@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_modules_installed</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_modules_installed().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_modules_installed(\$modules) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

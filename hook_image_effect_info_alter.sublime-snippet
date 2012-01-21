@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_image_effect_info_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_image_effect_info_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_image_effect_info_alter(&\$effects) {
+  // override the image module's crop effect with more options.
+  /*
+   *\$effect['image_crop']['effect callback'] = 'mymodule_crop_effect';
+   *\$effect['image_crop']['form callback'] = 'mymodule_crop_form';
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

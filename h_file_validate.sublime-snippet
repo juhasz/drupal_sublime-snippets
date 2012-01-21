@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>h_file_validate</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_file_validate().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_file_validate(&\$file) {
+  \$errors = array();
+  if (${1}) {
+    \$errors[] = t("${2}");
+  }
+
+  return \$errors;
+}
+]]></content>
+</snippet>

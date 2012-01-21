@@ -1,0 +1,20 @@
+<snippet>
+  <tabTrigger>hook_archiver_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_archiver_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_archiver_info() {
+  return array(
+    /*
+     *'tar' => array(
+     *  'class' => 'ArchiverTar',
+     *  'extensions' => array('tar', 'tar.gz', 'tar.bz2'),
+     */
+    '${1}' => array(
+      'class' => '${2}',
+      'extensions' => array('${3}'${4}),
+    ),
+  );
+}
+]]></content>
+</snippet>

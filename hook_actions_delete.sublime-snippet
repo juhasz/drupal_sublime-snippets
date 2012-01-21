@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>hook_actions_delete</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_actions_delete().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_actions_delete(\$aid) {
+  db_delete('${1}')
+    ->condition('aid', \$aid)
+    ->execute();
+}
+]]></content>
+</snippet>

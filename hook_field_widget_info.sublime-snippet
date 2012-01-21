@@ -1,0 +1,31 @@
+<snippet>
+  <tabTrigger>hook_field_widget_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_widget_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_widget_info() {
+    return array(
+    /*
+     *'text_textfield' => array(
+     *  'label' => t('Text field'),
+     *  'field types' => array('text'),
+     *  'settings' => array('size' => 60),
+     *  'behaviors' => array(
+     *    'multiple values' => FIELD_BEHAVIOR_DEFAULT,
+     *    'default value' => FIELD_BEHAVIOR_DEFAULT,
+     *  ),
+     *),
+     */
+    '${1}' => array(
+      'label' => t('${2}'),
+      'field types' => array('${3}'),
+      'settings' => array('${4}' => ${5}),
+      'behaviors' => array(
+        'multiple values' => ${6}FIELD_BEHAVIOR_DEFAULT,
+        'default value' => ${7}FIELD_BEHAVIOR_DEFAULT,
+      ),
+    ),
+  );
+}
+]]></content>
+</snippet>

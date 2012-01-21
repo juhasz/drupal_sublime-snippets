@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_username_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_username_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_username_alter(&\$name, \$account) {
+  // Display the user's uid instead of name.
+  /*
+   *if (isset(\$account->uid)) {
+   *  \$name = t('User !uid', array('!uid' => \$account->uid));
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

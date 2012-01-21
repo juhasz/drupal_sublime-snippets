@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>h_page_build</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_page_build().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_page_build(&\$page) {
+  \$page['${1}']['${2}'] = array(
+    '#markup' => t('${3}'),
+    '#weight' => ${4},
+  );
+}
+]]></content>
+</snippet>

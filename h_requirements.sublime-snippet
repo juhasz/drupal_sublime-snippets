@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>h_requirements</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_requirements().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_requirements(\$phase) {
+  \$requirements = array();
+  ${1:/* Your code here */}
+
+  return \$requirements;
+}
+]]></content>
+</snippet>

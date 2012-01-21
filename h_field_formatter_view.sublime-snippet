@@ -1,0 +1,26 @@
+<snippet>
+  <tabTrigger>h_field_formatter_view</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_formatter_view().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_formatter_view(\$entity_type, \$entity, \$field, \$instance, \$langcode, \$items, \$display) {
+  \$element = array();
+  \$settings = \$display['settings'];
+
+  switch (\$display['type']) {
+    case '${1}':
+      foreach (\$items as \$delta => \$item) {
+        \$element[\$delta] = array(
+          '#theme' => '${2}',
+          '#data' => \$item['value'],
+          '#markup' => ${3},
+          '#${4}' => \$settings['${5}'],
+        );
+      }
+      break;
+  }
+
+  return \$element;
+}
+]]></content>
+</snippet>

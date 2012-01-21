@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_menu_link_update</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_menu_link_update().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_menu_link_update(\$link) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

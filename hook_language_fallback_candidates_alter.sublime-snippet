@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_language_fallback_candidates_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_language_fallback_candidates_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_language_fallback_candidates_alter(array &\$fallback_candidates) {
+  /*
+   *\$fallback_candidates = array_reverse(\$fallback_candidates);
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

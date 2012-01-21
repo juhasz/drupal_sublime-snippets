@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_load</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_load().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_load(\$nodes) {
+  /*
+   *\$result = db_query('SELECT nid, foo FROM {mytable} WHERE nid IN (:nids)', array(':nids' => array_keys(\$nodes)));
+   *foreach (\$result as \$record) {
+   *  \$nodes[\$record->nid]->foo = \$record->foo;
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

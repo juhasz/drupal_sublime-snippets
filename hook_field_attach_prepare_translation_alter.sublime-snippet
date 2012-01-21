@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_field_attach_prepare_translation_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_attach_prepare_translation_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_attach_prepare_translation_alter(&\$entity, \$context) {
+  /*
+   *if (\$context['entity_type'] == 'custom_entity_type') {
+   *  \$entity->custom_field = \$context['source_entity']->custom_field;
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

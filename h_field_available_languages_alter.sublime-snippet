@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_field_available_languages_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_available_languages_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_available_languages_alter(&\$languages, \$context) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>hook_node_revision_delete</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_revision_delete().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_revision_delete(\$node) {
+  db_delete('${1}')
+    ->condition('vid', \$node->vid)
+    ->execute();
+}
+]]></content>
+</snippet>

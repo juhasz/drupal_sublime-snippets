@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_file_mimetype_mapping_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_file_mimetype_mapping_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_file_mimetype_mapping_alter(&\$mapping) {
+  \$mapping['${1}']['${2}'] = '${3}';
+}
+]]></content>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_disable</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_disable().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_disable() {
+  /*
+   *mymodule_cache_rebuild();
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

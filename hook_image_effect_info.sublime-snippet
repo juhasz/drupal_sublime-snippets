@@ -1,0 +1,20 @@
+<snippet>
+  <tabTrigger>hook_image_effect_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_image_effect_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_image_effect_info() {
+  \$effects = array();
+
+  \$effects['${1}'] = array(
+    'label' => t('${2}'),
+    'help' => t('${3}'),
+    'effect callback' => '${4}',
+    'form callback' => '${5}',
+    'summary theme' => '${6}',
+  );
+
+  return \$effects;
+}
+]]></content>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>h_language_init</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_language_init().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_language_init() {
+  global \$language, \$conf;
+
+  switch (\$language->language) {
+    case '${1}':
+      \$conf['${2}'] = '${3}';
+      break;
+  }
+}
+]]></content>
+</snippet>

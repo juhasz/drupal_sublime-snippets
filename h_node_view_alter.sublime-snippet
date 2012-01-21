@@ -1,0 +1,9 @@
+<snippet>
+  <tabTrigger>h_node_view_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_view_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_view_alter(&\$build) {
+}
+]]></content>
+</snippet>

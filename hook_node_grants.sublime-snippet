@@ -1,0 +1,18 @@
+<snippet>
+  <tabTrigger>hook_node_grants</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_grants().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_grants(\$account, \$op) {
+  /*
+   *if (user_access('access private content', \$account)) {
+   *  \$grants['example'] = array(1);
+   *}
+   *\$grants['example_owner'] = array(\$account->uid);
+   */
+  ${1:/* Your code here */}
+
+  return \$grants;
+}
+]]></content>
+</snippet>

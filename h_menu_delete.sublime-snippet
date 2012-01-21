@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_menu_delete</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_menu_delete().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_menu_delete(\$menu) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

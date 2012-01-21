@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>h_archiver_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_archiver_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_archiver_info() {
+  return array(
+    '${1}' => array(
+      'class' => '${2}',
+      'extensions' => array('${3}'${4}),
+    ),
+  );
+}
+]]></content>
+</snippet>

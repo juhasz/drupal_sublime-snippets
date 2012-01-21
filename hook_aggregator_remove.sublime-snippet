@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_aggregator_remove</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_aggregator_remove().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_aggregator_remove(\$feed) {
+  /*
+   *mymodule_remove_items(\$feed->fid);
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

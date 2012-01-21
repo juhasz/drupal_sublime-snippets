@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>hook_stream_wrappers_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_stream_wrappers_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_stream_wrappers_alter(&\$wrappers) {
+  // Change the name of private files to reflect the performance.
+  /*
+   *\$wrappers['private']['name'] = t('Slow files');
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

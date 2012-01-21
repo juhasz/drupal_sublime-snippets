@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_translated_menu_link_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_translated_menu_link_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_translated_menu_link_alter(&\$item, \$map) {
+  /*
+   *if (\$item['href'] == 'devel/cache/clear') {
+   *  \$item['localized_options']['query'] = drupal_get_destination();
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

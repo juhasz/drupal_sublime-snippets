@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>h_forms</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_forms().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_forms(\$form_id, \$args) {
+  \$forms['${1}'] = array(
+    'callback' => '${2}',
+    'callback arguments' => array('${3}'),
+  );
+
+  return \$forms;
+}
+]]></content>
+</snippet>

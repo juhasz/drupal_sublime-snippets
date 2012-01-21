@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>h_openid_normalization_method_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_openid_normalization_method_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_openid_normalization_method_info() {
+  return array(
+    '${1}' => '${2}',
+  );
+}
+]]></content>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>h_aggregator_parse_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_aggregator_parse_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_aggregator_parse_info() {
+  return array(
+    'title' => t('${1}'),
+    'description' => t('${2}'),
+  );
+}
+]]></content>
+</snippet>

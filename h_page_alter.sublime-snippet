@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_page_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_page_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_page_alter(&\$page) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

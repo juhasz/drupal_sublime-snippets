@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_flush_caches</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_flush_caches().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_flush_caches() {
+  /*
+   *return array('cache_example');
+   */
+  return array('${1}');
+}
+]]></content>
+</snippet>

@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>h_form_system_theme_settings_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_form_system_theme_settings_alter(&\$form, &\$form_state) {
+  \$form['${1}']${2} = array(
+    '#type' => '${3}',
+    '#title' => t('${4}'),
+    '#default_value' => theme_get_setting('${5}'),
+    '#description'   => t('${6}'),
+  );
+}
+]]></content>
+</snippet>

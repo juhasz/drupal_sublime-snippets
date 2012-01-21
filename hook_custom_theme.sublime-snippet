@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_custom_theme</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_custom_theme().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_custom_theme() {
+  // Allow the user to request a particular theme via a query parameter.
+  /*
+   *if (isset(\$_GET['theme'])) {
+   *  return \$_GET['theme'];
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

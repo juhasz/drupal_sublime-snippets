@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>hook_menu_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_menu_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_menu_alter(&\$items) {
+  // Example - disable the page at node/add
+  /*
+   *\$items['node/add']['access callback'] = FALSE;
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

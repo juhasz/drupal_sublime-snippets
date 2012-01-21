@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_init</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_init().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_init() {
+  /*
+   *drupal_add_css(drupal_get_path('module', 'book') . '/book.css');
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

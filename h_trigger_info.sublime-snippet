@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>h_trigger_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_trigger_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_trigger_info() {
+  return array(
+    '${1}' => array(
+      '${2}' => array(
+        'label' => t('${3}'),
+      ),
+    ),
+  );
+}
+]]></content>
+</snippet>

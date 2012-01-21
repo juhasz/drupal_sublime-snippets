@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_field_formatter_prepare_view</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_formatter_prepare_view().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_formatter_prepare_view(\$entity_type, \$entities, \$field, \$instances, \$langcode, &\$items, \$displays) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

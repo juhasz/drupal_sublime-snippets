@@ -1,0 +1,24 @@
+<snippet>
+  <tabTrigger>h_language_negotiation_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_language_negotiation_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_language_negotiation_info() {
+  return array(
+    '${1}' => array(
+      'callbacks' => array(
+        'language' => '${2}',
+        'switcher' => '${3}',
+        'url_rewrite' => '${4}',
+      ),
+      'file' => drupal_get_path('module', '${5}') . '/${6}',
+      'weight' => ${7},
+      'types' => array('${8}'),
+      'name' => t('${9}'),
+      'description' => t('${10}'),
+      'cache' => ${11},
+    ),
+  );
+}
+]]></content>
+</snippet>

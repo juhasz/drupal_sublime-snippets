@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_search_status</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_search_status().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_search_status() {
+  /*
+   *\$total = db_query('SELECT COUNT(*) FROM {node} WHERE status = 1')->fetchField();
+   *\$remaining = db_query("SELECT COUNT(*) FROM {node} n LEFT JOIN {search_dataset} d ON d.type = 'node' AND d.sid = n.nid WHERE n.status = 1 AND d.sid IS NULL OR d.reindex <> 0")->fetchField();
+   *return array('remaining' => \$remaining, 'total' => \$total);
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

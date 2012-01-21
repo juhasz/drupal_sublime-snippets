@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_taxonomy_vocabulary_update</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_taxonomy_vocabulary_update().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_taxonomy_vocabulary_update(\$vocabulary) {
+  /*
+   *\$status = \$vocabulary->synonyms ? TRUE : FALSE;
+   *if (\$vocabulary->synonyms) {
+   *  variable_set('taxonomy_' . \$vocabulary->vid . '_synonyms', \$status);
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

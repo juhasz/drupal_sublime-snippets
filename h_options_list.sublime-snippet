@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>h_options_list</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_options_list().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_options_list(\$field) {
+   \$options = array(
+     ${1} => ${2},
+   );
+
+  return \$options;
+}
+]]></content>
+</snippet>

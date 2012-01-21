@@ -1,0 +1,31 @@
+<snippet>
+  <tabTrigger>h_field_schema</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_schema().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_schema(\$field) {
+  \$columns = array(
+    '${1}' => array(
+      'type' => '${2}',
+      'length' => ${3},
+      'unsigned' => ${4},
+      'not null' => ${5},
+    ),
+  );
+  \$columns = array(
+    '${6}' => array(
+      'type' => '${7}',
+      'length' => ${8},
+      'unsigned' => ${9},
+      'not null' => ${10},
+    ),
+  );
+  return array(
+    'columns' => \$columns,
+    'indexes' => array(
+      '${11}' => array('${12}'),
+    ),
+  );
+}
+]]></content>
+</snippet>

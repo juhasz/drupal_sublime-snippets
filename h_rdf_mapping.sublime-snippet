@@ -1,0 +1,36 @@
+<snippet>
+  <tabTrigger>h_rdf_mapping</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_rdf_mapping().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_rdf_mapping() {
+  return array(
+    array(
+      'type' => '${1}',
+      'bundle' => '${2}',
+      'mapping' => array(
+        'rdftype' => array('${3}'),
+        'title' => array(
+          'predicates' => array('${4}'),
+        ),
+        'created' => array(
+          'predicates' => array('${5}'),
+          'datatype' => '${6}',
+          'callback' => '${7}',
+        ),
+        'body' => array(
+          'predicates' => array('${8}'),
+        ),
+        'uid' => array(
+          'predicates' => array('${9}'),
+          'type' => '${10}',
+        ),
+        'name' => array(
+          'predicates' => array('${11}'),
+        ),
+      ),
+    ),
+  );
+}
+]]></content>
+</snippet>

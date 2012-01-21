@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>h_tokens(\$type,</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_tokens(\$type, \$tokens, array \$data = array(), array \$options = array().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_tokens(\$type, \$tokens, array \$data = array(), array \$options = array()) {
+  \$replacements = array();
+  ${1:/* Your code here */}
+
+  return \$replacements;
+}
+]]></content>
+</snippet>

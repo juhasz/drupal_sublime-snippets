@@ -1,0 +1,17 @@
+<snippet>
+  <tabTrigger>hook_url_inbound_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_url_inbound_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_url_inbound_alter(&\$path, \$original_path, \$path_language) {
+  // Create the path user/me/edit, which allows a user to edit their account.
+  /*
+   *if (preg_match('|^user/me/edit(/.*)?|', \$path, \$matches)) {
+   *  global \$user;
+   *  \$path = 'user/' . \$user->uid . '/edit' . \$matches[1];
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

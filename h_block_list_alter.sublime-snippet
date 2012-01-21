@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_block_list_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_block_list_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_block_list_alter(&\$blocks) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_taxonomy_term_insert</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_taxonomy_term_insert().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_taxonomy_term_insert(\$term) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

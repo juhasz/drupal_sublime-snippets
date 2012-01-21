@@ -1,0 +1,18 @@
+<snippet>
+  <tabTrigger>hook_theme_registry_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_theme_registry_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_theme_registry_alter(&\$theme_registry) {
+  // Kill the next/previous forum topic navigation links.
+  /*
+   *foreach (\$theme_registry['forum_topic_navigation']['preprocess functions'] as \$key => \$value) {
+   *  if (\$value = 'template_preprocess_forum_topic_navigation') {
+   *    unset(\$theme_registry['forum_topic_navigation']['preprocess functions'][\$key]);
+   *  }
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

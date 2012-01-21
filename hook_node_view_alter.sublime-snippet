@@ -1,0 +1,18 @@
+<snippet>
+  <tabTrigger>hook_node_view_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_view_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_view_alter(&\$build) {
+  /*
+   *if (\$build['#view_mode'] == 'full' && isset(\$build['an_additional_field'])) {
+   *  // Change its weight.
+   *  \$build['an_additional_field']['#weight'] = -10;
+   *}
+   *
+   *  // Add a #post_render callback to act on the rendered HTML of the node.
+   *  \$build['#post_render'][] = 'my_module_node_post_render';
+   */
+}
+]]></content>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_user_role_delete</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_user_role_delete().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_role_delete(\$role) {
+  // Delete existing instances of the deleted role.
+  db_delete('${1}')
+    ->condition('rid', \$role->rid)
+    ->execute();
+}
+]]></content>
+</snippet>

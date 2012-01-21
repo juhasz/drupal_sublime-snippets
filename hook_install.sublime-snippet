@@ -1,0 +1,23 @@
+<snippet>
+  <tabTrigger>hook_install</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_install().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_install() {
+  // Populate the default {node_access} record.
+  /*
+   *db_insert('node_access')
+   *  ->fields(array(
+   *    'nid' => 0,
+   *    'gid' => 0,
+   *    'realm' => 'all',
+   *    'grant_view' => 1,
+   *    'grant_update' => 0,
+   *    'grant_delete' => 0,
+   *  ))
+   *  ->execute();
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

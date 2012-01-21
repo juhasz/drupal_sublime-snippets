@@ -1,0 +1,35 @@
+<snippet>
+  <tabTrigger>h_schema</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_schema().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_schema() {
+  \$schema['${1}'] = array(
+    'description' => '${2}',
+    'fields' => array(
+      '${3}' => array(
+        'description' => '${4}',
+        'type' => '${5}',
+        'unsigned' => ${6},
+        'not null' => ${7},
+        'default' => ${8},
+			),
+		),
+    'indexes' => array(
+      '${9}' => array('${10}'),
+		),
+    'unique keys' => array(
+      '${11}' => array('${12}')
+		),
+    'foreign keys' => array(
+      '${13}' => array(
+        'table' => '${14}',
+        'columns' => array('${15}' => '${16}'),
+			),
+		),
+    'primary key' => array('${17}'),
+  );
+  return \$schema;
+}
+]]></content>
+</snippet>

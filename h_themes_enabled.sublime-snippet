@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>h_themes_enabled</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_themes_enabled().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_themes_enabled(\$theme_list) {
+  foreach (\$theme_list as \$theme) {
+    ${1:/* Your code here */}
+  }
+}
+]]></content>
+</snippet>

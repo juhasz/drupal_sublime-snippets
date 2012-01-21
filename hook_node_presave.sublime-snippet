@@ -1,0 +1,18 @@
+<snippet>
+  <tabTrigger>hook_node_presave</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_presave().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_presave(\$node) {
+  /*
+   *if (\$node->nid && \$node->moderate) {
+   *  // Reset votes when node is updated:
+   *  \$node->score = 0;
+   *  \$node->users = '';
+   *  \$node->votes = 0;
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

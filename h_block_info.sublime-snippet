@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>h_block_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_block_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_block_info() {
+  \$blocks['${1}'] = array(
+    'info' => t('${2}'),
+    'cache' => ${3}DRUPAL_NO_CACHE
+  );
+
+  return \$blocks;
+}
+]]></content>
+</snippet>

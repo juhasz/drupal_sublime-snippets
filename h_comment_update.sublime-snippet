@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_comment_update</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_comment_update().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_comment_update(\$comment) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_js_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_js_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_js_alter(&\$javascript) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_verify_update_archive</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_verify_update_archive().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_verify_update_archive(\$project, \$archive_file, \$directory) {
+  if (!file_exists(\$directory)) {
+    return TRUE;
+  }
+  ${1:/* Add other checks on the archive integrity here */}
+}
+]]></content>
+</snippet>

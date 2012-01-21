@@ -1,0 +1,24 @@
+<snippet>
+  <tabTrigger>hook_language_types_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_language_types_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_language_types_info() {
+  return array(
+    /*
+     *'custom_language_type' => array(
+     *  'name' => t('Custom language'),
+     *  'description' => t('A custom language type.'),
+     *),
+     *'fixed_custom_language_type' => array(
+     *  'fixed' => array('custom_language_provider'),
+     *),
+     */
+    '${1}' => array(
+      'name' => t('${2}'),
+      'description' => t('${3}'),
+    ),
+  );
+}
+]]></content>
+</snippet>

@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>hook_comment_insert</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_comment_insert().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_comment_insert(\$comment) {
+  // Reindex the node when comments are added.
+  /*
+   *search_touch_node(\$comment->nid);
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

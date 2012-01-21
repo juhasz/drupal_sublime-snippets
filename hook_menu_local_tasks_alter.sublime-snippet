@@ -1,0 +1,32 @@
+<snippet>
+  <tabTrigger>hook_menu_local_tasks_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_menu_local_tasks_alter(&\$data, \$router_item, \$root_path) {
+  // Add an action to all pages.
+  // \$data['actions']['output'][] = array(
+  //
+  // Add a tab to all pages.
+  /*
+   *\$data['tabs'][0]['output'][] = array(
+   *  '#theme' => 'menu_local_task',
+   *  '#link' => array(
+   *    'title' => t('${1}'),
+   *    'href' => '${2}',
+   *    'localized_options' => array(
+   *      'attributes' => array(
+   *        'title' => t('${3}'),
+   *      ),
+   *    ),
+   *  ),
+   *  // Define whether this link is active. This can be omitted for
+   *  // implementations that add links to pages outside of the current page
+   *  // context.
+   *  '#active' => (\$router_item['path'] == \$root_path),
+   *);
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

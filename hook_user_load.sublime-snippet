@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_user_load</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_user_load().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_load(\$users) {
+  /*
+   *\$result = db_query('SELECT * FROM {my_table} WHERE uid IN (:uids)', array(':uids' => array_keys(\$users)));
+   *foreach (\$result as \$record) {
+   *  \$users[\$record->uid]->foo = \$result->foo;
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

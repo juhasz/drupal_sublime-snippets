@@ -1,0 +1,26 @@
+<snippet>
+  <tabTrigger>hook_user_cancel</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_user_cancel().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_cancel(\$edit, \$account, \$method) {
+  switch (\$method) {
+    /*
+     *case 'user_cancel_block_unpublish':
+     *  // Unpublish nodes (current revisions).
+     *  module_load_include('inc', 'node', 'node.admin');
+     *  \$nodes = db_select('node', 'n')
+     *    ->fields('n', array('nid'))
+     *    ->condition('uid', \$account->uid)
+     *    ->execute()
+     *    ->fetchCol();
+     *  node_mass_update(\$nodes, array('status' => 0));
+     *  break;
+     */
+    case '${1}':
+      ${2:/* Your code here */}
+      break;
+  }
+}
+]]></content>
+</snippet>

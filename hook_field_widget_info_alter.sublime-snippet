@@ -1,0 +1,20 @@
+<snippet>
+  <tabTrigger>hook_field_widget_info_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_widget_info_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_widget_info_alter(&\$info) {
+  // Add a setting to a widget type.
+  /*
+   *\$info['text_textfield']['settings'] += array(
+   *  'mymodule_additional_setting' => 'default value',
+   *);
+   */
+  // Let a new field type re-use an existing widget.
+  /*
+   *\$info['options_select']['field types'][] = 'my_field_type';
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

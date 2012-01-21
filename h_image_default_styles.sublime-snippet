@@ -1,0 +1,22 @@
+<snippet>
+  <tabTrigger>h_image_default_styles</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_image_default_styles().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_image_default_styles() {
+  \$styles = array();
+
+  \$styles['${1}'] = array(
+    'effects' => array(
+      array(
+        'name' => '${2}',
+        'data' => array('width' => ${3}, 'height' => ${4}, 'upscale' => ${5}),
+        'weight' => ${6},
+      ),
+    ),
+  );
+
+  return \$styles;
+}
+]]></content>
+</snippet>

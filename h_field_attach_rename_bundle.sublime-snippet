@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_field_attach_rename_bundle</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_attach_rename_bundle().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_attach_rename_bundle(\$entity_type, \$bundle_old, \$bundle_new) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

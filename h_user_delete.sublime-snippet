@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>h_user_delete</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_user_delete().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_delete(\$account) {
+  db_delete('${1}')
+    ->condition('uid', \$account->uid)
+    ->execute();
+}
+]]></content>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_shortcut_default_set</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_shortcut_default_set().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_shortcut_default_set(\$account) {
+  // Use a special set of default shortcuts for administrators only.
+  /*
+   *if (in_array(variable_get('user_admin_role', 0), \$account->roles)) {
+   *  return variable_get('mymodule_shortcut_admin_default_set');
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

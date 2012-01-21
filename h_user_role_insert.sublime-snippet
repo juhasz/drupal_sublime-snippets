@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>h_user_role_insert</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_user_role_insert().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_role_insert(\$role) {
+  db_insert('${1}')
+    ->fields(array(
+      'rid' => \$role->rid,
+      'role_description' => \$role->description,
+    ))
+    ->execute();
+}
+]]></content>
+</snippet>

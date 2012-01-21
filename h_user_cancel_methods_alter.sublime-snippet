@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_user_cancel_methods_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_user_cancel_methods_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_cancel_methods_alter(&\$methods) {
+   \$methods['${1}']${2}
+}
+]]></content>
+</snippet>

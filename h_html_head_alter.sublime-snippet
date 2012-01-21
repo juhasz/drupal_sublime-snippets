@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>h_html_head_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_html_head_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_html_head_alter(&\$head_elements) {
+  foreach (\$head_elements as \$key => \$element) {
+     ${1:/* Your code here */}
+  }
+}
+]]></content>
+</snippet>

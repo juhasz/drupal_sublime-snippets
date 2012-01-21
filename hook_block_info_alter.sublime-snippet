@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>hook_block_info_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_block_info_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_block_info_alter(&\$blocks, \$theme, \$code_blocks) {
+  // Disable the login block.
+  /*
+   *\$blocks['user']['login']['status'] = 0;
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

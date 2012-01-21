@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_dashboard_regions</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_dashboard_regions().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_dashboard_regions() {
+  // Define a new dashboard region. Your module can also then define
+  // theme_mymodule_dashboard_region() as a theme wrapper function to control
+  // the region's appearance.
+  /*
+   *return array('mymodule_dashboard_region' => "My module's dashboard region");
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

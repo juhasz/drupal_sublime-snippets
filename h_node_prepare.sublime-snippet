@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_node_prepare</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_prepare().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_prepare(\$node) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

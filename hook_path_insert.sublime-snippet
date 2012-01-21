@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>hook_path_insert</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_path_insert().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_path_insert(\$path) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

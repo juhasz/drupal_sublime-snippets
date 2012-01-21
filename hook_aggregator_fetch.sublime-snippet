@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_aggregator_fetch</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_aggregator_fetch().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_aggregator_fetch(\$feed) {
+  /*
+   *\$feed->source_string = mymodule_fetch(\$feed->url);
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

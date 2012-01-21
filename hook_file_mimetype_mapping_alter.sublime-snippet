@@ -1,0 +1,22 @@
+<snippet>
+  <tabTrigger>hook_file_mimetype_mapping_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_file_mimetype_mapping_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_file_mimetype_mapping_alter(&\$mapping) {
+  // Add new MIME type 'drupal/info'.
+  /*
+   *\$mapping['mimetypes']['example_info'] = 'drupal/info';
+   */
+  // Add new extension '.info' and map it to the 'drupal/info' MIME type.
+  /*
+   *\$mapping['extensions']['info'] = 'example_info';
+   */
+  // Override existing extension mapping for '.ogg' files.
+  /*
+   *\$mapping['extensions']['ogg'] = 189;
+   */
+  \$mapping['${1}']['${2}'] = '${3}';
+}
+]]></content>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <tabTrigger>hook_trigger_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_trigger_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_trigger_info() {
+  return array(
+    '${1}' => array(
+      /*
+       *'node_presave' => array(
+       *  'label' => t('When either saving new content or updating existing content'),
+       *),
+       */
+      '${2}' => array(
+        'label' => t('${3}'),
+      ),
+    ),
+  );
+}
+]]></content>
+</snippet>

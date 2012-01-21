@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_taxonomy_vocabulary_insert</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_taxonomy_vocabulary_insert().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_taxonomy_vocabulary_insert(\$vocabulary) {
+  /*
+   *if (\$vocabulary->synonyms) {
+   *  variable_set('taxonomy_' . \$vocabulary->vid . '_synonyms', TRUE);
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

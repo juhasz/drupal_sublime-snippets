@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_test_group_finished</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_test_group_finished().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_test_group_finished() {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

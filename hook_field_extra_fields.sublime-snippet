@@ -1,0 +1,55 @@
+<snippet>
+  <tabTrigger>hook_field_extra_fields</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_extra_fields().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_extra_fields() {
+  /*
+   *\$extra['node']['poll'] = array(
+   *  'form' => array(
+   *    'choice_wrapper' => array(
+   *      'label' => t('Poll choices'),
+   *      'description' => t('Poll choices'),
+   *      'weight' => -4,
+   *    ),
+   *    'settings' => array(
+   *      'label' => t('Poll settings'),
+   *      'description' => t('Poll module settings'),
+   *      'weight' => -3,
+   *    ),
+   *  ),
+   *  'display' => array(
+   *    'poll_view_voting' => array(
+   *      'label' => t('Poll vote'),
+   *      'description' => t('Poll vote'),
+   *      'weight' => 0,
+   *    ),
+   *    'poll_view_results' => array(
+   *      'label' => t('Poll results'),
+   *      'description' => t('Poll results'),
+   *      'weight' => 0,
+   *    ),
+   *  )
+   *);
+   */
+  \$extra['${1}']['${2}'] = array(
+    'form' => array(
+      '${3}' => array(
+        'label' => t('${4}'),
+        'description' => t('${5}'),
+        'weight' => ${6},
+      ),
+    ),
+    'display' => array(
+      '${7}' => array(
+        'label' => t('${8}'),
+        'description' => t('${9}'),
+        'weight' => ${10},
+      ),
+    )
+  );
+
+  return \$extra;
+}
+]]></content>
+</snippet>

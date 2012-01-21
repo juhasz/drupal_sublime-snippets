@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>hook_comment_delete</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_comment_delete().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_comment_delete(\$comment) {
+  /*
+   *drupal_set_message(t('Comment: @subject has been deleted', array('@subject' => \$comment->subject)));
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

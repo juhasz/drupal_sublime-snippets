@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>h_node_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_info() {
+  return array(
+    '${1}' => array(
+      'name' => t('${2}'),
+      'base' => '${3}',
+      'description' => t('${4}'),
+    )
+  );
+}
+]]></content>
+</snippet>

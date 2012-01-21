@@ -1,0 +1,20 @@
+<snippet>
+  <tabTrigger>h_node_access_records</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_access_records().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_access_records(\$node) {
+    \$grants[] = array(
+      'realm' => '${1}',
+      'gid' => ${2},
+      'grant_view' => ${3},
+      'grant_update' => ${4},
+      'grant_delete' => ${5},
+      'priority' => ${6},
+    );
+
+    return \$grants;
+  }
+}
+]]></content>
+</snippet>

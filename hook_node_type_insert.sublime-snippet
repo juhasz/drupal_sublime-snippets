@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>hook_node_type_insert</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_type_insert().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_type_insert(\$info) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

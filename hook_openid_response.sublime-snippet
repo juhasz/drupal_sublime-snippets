@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>hook_openid_response</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_openid_response().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_openid_response(\$response, \$account) {
+  /*
+   *if (isset(\$response['openid.ns.ax'])) {
+   *  _mymodule_store_ax_fields(\$response, \$account);
+   *}
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

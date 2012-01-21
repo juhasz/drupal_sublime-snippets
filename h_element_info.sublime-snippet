@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>h_element_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_element_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_element_info() {
+  \$types['${1}'] = array(
+    ${2:/* Your code here */}
+  );
+  return \$types;
+}
+]]></content>
+</snippet>

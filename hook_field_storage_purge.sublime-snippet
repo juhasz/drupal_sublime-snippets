@@ -1,0 +1,25 @@
+<snippet>
+  <tabTrigger>hook_field_storage_purge</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_storage_purge().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_storage_purge(\$entity_type, \$entity, \$field, \$instance) {
+  list(\$id, \$vid, \$bundle) = entity_extract_ids(\$entity_type, \$entity);
+  /*
+   *\$etid = _field_sql_storage_etid(\$entity_type);
+   *
+   *\$table_name = _field_sql_storage_tablename(\$field);
+   *\$revision_name = _field_sql_storage_revision_tablename(\$field);
+   *db_delete(\$table_name)
+   *  ->condition('etid', \$etid)
+   *  ->condition('entity_id', \$id)
+   *  ->execute();
+   *db_delete(\$revision_name)
+   *  ->condition('etid', \$etid)
+   *  ->condition('entity_id', \$id)
+   *  ->execute();
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

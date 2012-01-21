@@ -1,0 +1,19 @@
+<snippet>
+  <tabTrigger>h_block_view</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_block_view().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_block_view(\$delta = '') {
+  \$block = array();
+
+  switch (\$delta) {
+    case '${1}':
+      \$block['subject'] = t('${2}');
+      \$block['content'] = theme('${3}', array('${4}' =>${5}));
+      break;
+    ${6}
+  }
+  return \$block;
+}
+]]></content>
+</snippet>

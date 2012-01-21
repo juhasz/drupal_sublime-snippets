@@ -1,0 +1,19 @@
+<snippet>
+  <tabTrigger>hook_field_available_languages_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_available_languages_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_available_languages_alter(&\$languages, \$context) {
+  // Add an unavailable language.
+  /*
+   *\$languages[] = 'xx';
+   */
+  // Remove an available language.
+  /*
+   *\$index = array_search('yy', \$languages);
+   *unset(\$languages[\$index]);
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

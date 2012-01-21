@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_boot</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_boot().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_boot() {
+   ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,15 @@
+<snippet>
+  <tabTrigger>h_insert</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_insert().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_insert(\$node) {
+  db_insert('${1}')
+    ->fields(array(
+      'nid' => \$node->nid,
+      'extra' => \$node->extra,
+    ))
+    ->execute();
+}
+]]></content>
+</snippet>

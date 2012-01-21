@@ -1,0 +1,16 @@
+<snippet>
+  <tabTrigger>hook_simpletest_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_simpletest_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_simpletest_alter(&\$groups) {
+  // An alternative session handler module would not want to run the original
+  // Session https handling test because it checks the sessions table in the
+  // database.
+  /*
+   *unset(\$groups['Session']['testHttpsSession']);
+   */
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

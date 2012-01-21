@@ -1,0 +1,41 @@
+<snippet>
+  <tabTrigger>hook_field_widget_settings_form</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_widget_settings_form().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_widget_settings_form(\$field, \$instance) {
+  \$widget = \$instance['widget'];
+  \$settings = \$widget['settings'];
+
+  /*
+   *if (\$widget['type'] == 'text_textfield') {
+   *  \$form['size'] = array(
+   *    '#type' => 'textfield',
+   *    '#title' => t('Size of textfield'),
+   *    '#default_value' => \$settings['size'],
+   *    '#element_validate' => array('_element_validate_integer_positive'),
+   *    '#required' => TRUE,
+   *  );
+   *}
+   *else {
+   *  \$form['rows'] = array(
+   *    '#type' => 'textfield',
+   *    '#title' => t('Rows'),
+   *    '#default_value' => \$settings['rows'],
+   *    '#element_validate' => array('_element_validate_integer_positive'),
+   *    '#required' => TRUE,
+   *  );
+   *}
+   */
+  \$form['${1}']${2} = array(
+    '#type' => '${3}',
+    '#title' => t('${4}'),
+    '#default_value' => \$settings['${5}'],
+    '#required' => ${6},
+    '#element_validate' => array('${7}'),
+    '#description' => t('${8}'),${9}
+  );
+  return \$form;
+}
+]]></content>
+</snippet>

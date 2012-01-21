@@ -1,0 +1,30 @@
+<snippet>
+  <tabTrigger>hook_field_settings_form</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_settings_form().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_settings_form(\$field, \$instance, \$has_data) {
+  /*
+   *\$settings = \$field['settings'];
+   *\$form['max_length'] = array(
+   *  '#type' => 'textfield',
+   *  '#title' => t('Maximum length'),
+   *  '#default_value' => \$settings['max_length'],
+   *  '#required' => FALSE,
+   *  '#element_validate' => array('_element_validate_integer_positive'),
+   *  '#description' => t('The maximum length of the field in characters. Leave blank for an unlimited size.'),
+   *);
+   */
+  \$settings = \$field['settings'];
+  \$form['${1}']${2} = array(
+    '#type' => '${3}',
+    '#title' => t('${4}'),
+    '#default_value' => \$settings['${5}'],
+    '#required' => ${6},
+    '#element_validate' => array('${7}'),
+    '#description' => t('${8}'),${9}
+  );
+  return \$form;
+}
+]]></content>
+</snippet>

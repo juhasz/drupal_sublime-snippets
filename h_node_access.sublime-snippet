@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>h_node_access</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_access().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_access(\$node, \$op, \$account) {
+  \$type = is_string(\$node) ? \$node : \$node->type;
+  ${1:/* Your code here */}
+  return NODE_ACCESS_IGNORE;
+}
+]]></content>
+</snippet>

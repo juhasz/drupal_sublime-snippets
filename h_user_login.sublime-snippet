@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_user_login</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_user_login().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_login(&\$edit, \$account) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

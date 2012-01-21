@@ -1,0 +1,12 @@
+<snippet>
+  <tabTrigger>hook_node_delete</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_node_delete().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_delete(\$node) {
+  db_delete('${1}')
+    ->condition('nid', \$node->nid)
+    ->execute();
+}
+]]></content>
+</snippet>

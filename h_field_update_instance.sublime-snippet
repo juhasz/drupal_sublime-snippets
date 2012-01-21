@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_field_update_instance</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_field_update_instance().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_update_instance(\$instance, \$prior_instance) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>hook_action_info_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_action_info_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_action_info_alter(&\$actions) {
+  \$actions['${1}']['${2}'] = t('${3}');
+}
+]]></content>
+</snippet>

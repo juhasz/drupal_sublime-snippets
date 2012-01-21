@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_disable</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_disable().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_disable() {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

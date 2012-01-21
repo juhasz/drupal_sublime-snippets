@@ -1,0 +1,21 @@
+<snippet>
+  <tabTrigger>h_search_page</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_search_page().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_search_page(\$results) {
+  \$output['prefix']['#markup'] = '<ol class="search-results">';
+
+  foreach (\$results as \$entry) {
+    \$output[] = array(
+      '#theme' => '${1}',
+      '#result' => \$entry,
+      '#module' => '${2}',
+    );
+  }
+  \$output['suffix']['#markup'] = '</ol>' . theme('pager');
+
+  return \$output;
+}
+]]></content>
+</snippet>

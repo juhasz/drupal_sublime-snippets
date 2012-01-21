@@ -1,0 +1,14 @@
+<snippet>
+  <tabTrigger>h_cron_queue_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_cron_queue_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_cron_queue_info() {
+  \$queues['${1}'] = array(
+    'worker callback' => '${2}',
+    'time' => ${3},
+  );
+  return \$queues;
+}
+]]></content>
+</snippet>

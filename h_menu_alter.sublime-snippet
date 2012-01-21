@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_menu_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_menu_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_menu_alter(&\$items) {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

@@ -1,0 +1,37 @@
+<snippet>
+  <tabTrigger>h_entity_info</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_entity_info().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_entity_info() {
+    '${1}' => array(
+      'label' => t('${2}'),
+      'controller class' => '${3}',
+      'base table' => '${4}',
+      'revision table' => '${5}',
+      'uri callback' => '${6}',
+      'fieldable' => ${7},
+      'translation' => array(
+        'locale' => ${8},
+      ),
+      'entity keys' => array(
+        'id' => '${9}',
+        'revision' => '${10}',
+        'bundle' => '${11}',
+      ),
+      'bundle keys' => array(
+        'bundle' => '${12}',
+      ),
+      'bundles' => array(),
+      'view modes' => array(
+        '${13}' => array(
+          'label' => t('${14}'),
+          'custom settings' => ${15},
+        ),
+      ),
+    ),
+  );
+  return \$return;
+}
+]]></content>
+</snippet>

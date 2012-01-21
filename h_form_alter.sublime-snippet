@@ -1,0 +1,17 @@
+<snippet>
+  <tabTrigger>h_form_alter</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_form_alter().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_form_alter(&\$form, &\$form_state, \$form_id) {
+  \$form['${1}']${2} = array(
+    '#type' => '${3}',
+    '#title' => t('${4}'),
+    '#default_value' => \$settings['${5}'],
+    '#required' => ${6},
+    '#element_validate' => array('${7}'),
+    '#description' => t('${8}'),${9}
+  );
+}
+]]></content>
+</snippet>

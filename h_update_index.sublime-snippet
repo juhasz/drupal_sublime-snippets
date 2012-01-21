@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_update_index</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_update_index().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_update_index() {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>

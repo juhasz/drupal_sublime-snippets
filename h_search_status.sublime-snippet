@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>h_search_status</tabTrigger>
+  <content><![CDATA[/**
+ * Implements hook_search_status().
+ */
+function ${TM_FILENAME/([^.]*)\..*$/$1/}_search_status() {
+  ${1:/* Your code here */}
+}
+]]></content>
+</snippet>
