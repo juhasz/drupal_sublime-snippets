@@ -1,16 +1,12 @@
-Drupal snippets for Sublime Editor
-----------------------------------
+Drupal snippets for Sublime Text
+--------------------------------
 
 ### Install
 
 #### With [Package Control](http://wbond.net/sublime_packages/package_control)
 
 - Type `Cmd-Shift-P` on Os X, or `Ctrl-Shift-P` on Windows/Linux.
-- Add a new package repository with `Package Control: Add Repository`.
-- Insert the URL for this repository:
-  `https://github.com/juhasz/drupal_sublime-snippets`.
-- Then type again `Cmd-Shift-P` on Os X, or `Ctrl-Shift-P` on Windows/Linux.
-- `Package Control: Install Package` then `drupal_sublime-snippets`.
+- Install the plugin with `Package Control: Install Package`, `Drupal Snippets`.
 
 #### Otherwise
 
